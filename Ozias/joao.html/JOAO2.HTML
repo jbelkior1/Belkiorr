@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de LEDs</title>
+    <style>
+        body {
+            text-align: center;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            background-image: url("");
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 36px;
+            margin-top: 100px;
+        }
+
+        h3 {
+            text-align: center;
+            color: #4c10ff;
+            font-family: Arial, sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 15px;
+            background-image: url("https://t4.ftcdn.net/jpg/04/21/44/29/240_F_421442912_e9dARIDF7CnBKKcB1Ooy0aNcEOJ13eVY.jpg");
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+            transition: filter 0.3s ease; /* Adiciona transição suave para o filtro */
+        }
+
+        .btn:hover {
+            filter: brightness(85%); /* Diminui o brilho ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <h1>Ozias project website</h1>
+    <h3>Members: João Vitor Belchior e Gabriel Magalhães<h3>
+
+    <div class="btn-container">
+        <a href="https://www.google.com/maps/place/Itapecerica+da+Serra,+SP/@-23.7343611,-46.8925943,13z/data=!3m1!4b1!4m6!3m5!1s0x94cfad63bcaa3ec5:0xcb5cbf33fd10fd27!8m2!3d-23.7183369!4d-46.8481043!16zL20vMDQxMzQ5?entry=ttu" target="_blank"
+            class="btn">VENHA CONHECER O FIM O FUNDO</a><br>
+        <button class="btn" onclick="ligarDesligar('/ligar1')">TURN ON LED 1</button>
+        <button class="btn" onclick="ligarDesligar('/desligar1')">TURN OFF LED 1</button><br>
+        <button class="btn" onclick="ligarDesligar('/ligar2')">TURN ON LED 2</button>
+        <button class="btn" onclick="ligarDesligar('/desligar2')">TURN OFF LED 2</button>
+    </div>
+
+    <script>
+        function ligarDesligar(url) {   
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', url, true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

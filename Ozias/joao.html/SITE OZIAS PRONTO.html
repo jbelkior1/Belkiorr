@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de LEDs</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: courier, sans-serif;
+            background-image: url("https://mail.google.com/mail/u/0?ui=2&ik=e456751110&attid=0.1&permmsgid=msg-a:r7268718272907551397&th=18e4df853c97cea6&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8DNqzyaep7SYGf3aq4CylLxwCAxCrF9UFGP7OygGV2ga-Hl4d-qcc0xC9dJDng5pvotLJfYUMT11LZWdvYyRk-OtRNxuzKgzPn67jBeHh9dOnCg8DvN1DKirk&disp=emb&realattid=ii_ltvxmaxe0");
+        }
+
+        h1 {
+            color:  #4c00ff;
+            font-size: 37px;
+            margin-top: 150px;
+            box-shadow: 0 3px 3px rgba(13, 0, 255, 0.4);
+        }
+
+        h3 {
+            text-align: center;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            margin-bottom: 25px;
+        }
+
+        .btn-container {
+            text-align: center;
+            box-shadow: 0 3px 3px rgba(7, 3, 255, 0.4);
+            font-family: Arial, sans-serif;
+
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 15px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: mm ridge rgba(155, 176, 255, 0.418);
+            border-radius: 100px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            box-shadow: rgba(0, 0, 0, 0.887) 0px 5px, rgba(112, 111, 112, 0.3) 0px 10px, rgba(189, 189, 189, 0.2) 0px 15px, rgba(255, 255, 255, 0.2) 0px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WEBSITE PROJETO OZIAS</h1>
+    <h3>Membros: João Vitor Belchior e Gabriel Magalhães</h3>
+
+    <div class="btn-container">
+        <a href="https://drive.google.com/file/d/1WKymYe5Rww2u6uaSDsngTxFcb-iBulwJ/view?usp=sharing" target="_blank" class="btn">VIDEO DE EXPLICAÇÃO JOÃO BELCHIOR</a><br>
+        <a href="https://drive.google.com/file/d/1Vh4bhpNDbNPyKpd5XkbqOaxIoW-FLnfE/view" target="_blank" class="btn">VIDEO DE EXPLICAÇÃO GABRIEL MAGALHÃES</a><br>
+        <button class="btn" onclick="ligarDesligar('/ligar1', 'ACENDER LED 1')">ACENDER LED 1</button>
+        <button class="btn" onclick="ligarDesligar('/desligar1', 'DESLIGAR LED 1')">DESLIGAR LED 1</button><br>
+        <button class="btn" onclick="ligarDesligar('/ligar2', 'ACENDER LED 2')">ACENDER LED 2</button>
+        <button class="btn" onclick="ligarDesligar('/desligar2', 'DESLIGAR LED 2')">DESLIGAR LED 2</button>
+    </div>
+    <script>
+        function ligarDesligar(url, action) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', url, true);
+            xhttp.send();
+            console.log(action);
+        }
+    </script>
+</body>
+
+</html>
